@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+<!--  只能输入数字字母下划线和* # 空格>
+  // var reg = /^(?!\d+$)(?!^[a-zA-Z]+$)(?!^@\p{P}+$)^[a-zA-Z0-9_\u4e00-\u9fa5]+$/;
+// var reg = /^(?!\d+$)(?!^[a-zA-Z]+$)(?!^@\p{S}/ug)^[^\u4e00-\u9fa5a-zA-Z\d,\.，。]+/;
+var reg1 = /^[\u4e00-\u9fa5\w \*#]+$/;
+var reg2 = /^(\d+|[a-zA-Z]+|[\*#]+)$/;
+//?_??_?$_$⑸⑹≡±∵Ωβα
+if (!(reg1.test('dfffsdf房顶上∵') && !(reg2.test('dfffsdf房顶上∵')))) {
+  console.log('falser')
+}
+  // var b = /^[^!@#$%^&*()-=+]+$/;
+  // console.log(b.test('多好多好.dd'))
+
+</script>
+</body>
+</html>

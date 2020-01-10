@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .high_feature {
+      font-size: 12px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="high_feature">中证500加8%</div>
+  <script>
+    function len(s) {
+      var l = 0;
+      var a = s.split("");
+      for (var i = 0; i < a.length; i++) {
+        if (a[i].charCodeAt(0) < 299) {
+          l++;
+        } else {
+          l += 2;
+        }
+      }
+      return l;
+    }
+    console.log(document.getElementsByClassName('high_feature')[0].style);
+    console.log(len('中证500加8%'));
+    if (len('中证500加8%') > 9) {
+      document.getElementsByClassName('high_feature')[0].style.fontSize = '40px';
+    }
+
+  </script>
+</body>
+
+</html>
