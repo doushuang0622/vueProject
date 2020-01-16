@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Vuex from 'vuex' //引入
+import Vuex from 'Vuex' //引入
 import collection from './modules/collection'
 import footer from './modules/footerStatus'
 

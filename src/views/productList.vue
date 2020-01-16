@@ -50,15 +50,31 @@ export default {
       offset: 1500 // 滚动条与底部距离小于 offset 时触发load事件
     };
   },
+
   created() {
     let _self = this;
-    _self.getList();
+    console.log("created");
+    // _self.getList();
+  },
+  mounted() {
+    console.log("222");
+  },
+  activated() {
+    console.log("activated");
   },
   methods: {
     getList: function() {
-      // var reg1 = /^[\u4e00-\u9fa5\w \*#_-]+$/;
-      // var reg2 = /^(\d+|[a-zA-Z]+|[\*#_-]+)$/;
-      // var aa = "a22-34";
+      // var reg1 = /^[\u4e00-\u9fa5\w \*#_-\(\)\（\）]+$/;
+      // var reg2 = /^(\d+|[a-zA-Z]+|[\*#_-\(\)\（\）]+)$/;
+      // var aa = "a22-34(（";
+      // if (!(reg1.test(aa) && !reg2.test(aa))) {
+      //   console.log("err");
+      // } else {
+      //   console.log("正确");
+      // }
+      // var reg1 = /^[\u4e00-\u9fa5\w \&\*\<\>\(\)\,\，\.\。\《\》\-\#\;\；\_\/\、]+$/;
+      // var reg2 = /^(\d+|[a-zA-Z]+|[\&\*\<\>\(\)\,\，\.\。\《\》\-\#\;\；\_\/\,]+)$/;
+      // var aa = "()1,.<>《》_-;/";
       // if (!(reg1.test(aa) && !reg2.test(aa))) {
       //   console.log("err");
       // } else {
